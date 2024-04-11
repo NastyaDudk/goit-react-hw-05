@@ -1,0 +1,38 @@
+.mainWrapper {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  gap: 45px;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+
+.movieWrapper {
+  display: flex;
+  gap: 70px;
+}
+
+.goBackLink {
+  position: fixed;
+  left: 45px;
+  padding: 10px 25px;
+  background-color: #fff;
+  border: 0.5px solid #4169e1;
+  border-radius: 4px;
+  color: #4169e1;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 0.25s ease-in-out;
+}
+
+.movieText {
+  text-align: start;
+}
+
+.movieUl {
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
