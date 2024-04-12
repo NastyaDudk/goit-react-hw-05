@@ -10,7 +10,8 @@ const SearchForm = ({ onSubmit }) => {
     const input = e.target.elements.search.value.trim();
 
     if (!input) {
-      toast.error('Please enter a query.', { 
+      toast.error('Please enter a query.',
+        { 
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,

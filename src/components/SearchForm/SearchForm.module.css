@@ -44,3 +44,9 @@
   background-color: #6c8cff;
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  .searchInput {
+    width: 170px;
+  }
+}

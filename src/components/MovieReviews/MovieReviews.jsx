@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieReviews} from "../../api.js";
-import css from "./MovieReviews.module.css"
 import Loader from "../Loader/Loader.jsx";
 import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 
@@ -46,11 +45,11 @@ const MovieReviews = () => {
       {loading && <Loader />}
       {error && <ErrorMessage error={error} />}
       {reviews && (
-        <ul className={css.reviewListWrapper} ref={reviewsRef}>
+        <ul ref={reviewsRef}>
           {reviews.map(({ author, content }) => (
-            <li className={css.reviewItem} key={author}>
-              <p className={css.reviewAuthor}>Author: {author}</p>
-              <p className={css.reviewText}>{content}</p>
+            <li key={author}>
+              <p>Author: {author}</p>
+              <p>{content}</p>
             </li>
           ))}
         </ul>

@@ -7,6 +7,10 @@
   margin: 0 auto;
 }
 
+.movieImg {
+  height: 300px;
+}
+
 .movieWrapper {
   display: flex;
   gap: 70px;
@@ -25,6 +29,12 @@
   transition: all 0.25s ease-in-out;
 }
 
+.goBackLink:hover,
+.goBackLink:focus {
+  background-color: #4169e1;
+  color: #fff;
+}
+
 .movieText {
   text-align: start;
 }
@@ -35,4 +45,21 @@
   text-align: center;
   justify-content: center;
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .movieWrapper {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .movieImg {
+    width: 250px;
+    height: 200px;
+  }
+
+  .goBackLink {
+    padding: 5px 15px;
+  }
 }

@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 45px;
+  margin-top: 60px;
 }
 
 .movieListItem {
@@ -55,38 +56,19 @@
   transition: opacity 250ms ease-in-out;
 }
 
-@media screen and (min-width: 180px) {
-  .container {
-    max-width: 180px;
-    padding: 0, 15px;
+@media only screen and (max-width: 576px) {
+  .movieList {
+    flex-basis: calc((100% - 400px) / 3);
+    flex-direction: column;
+    align-items: center;
   }
+}
 
+@media only screen and (max-width: 768px) {
   .movieList {
     display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 410px) {
-  .container {
-    max-width: 410px;
-    padding: 0, 20px;
-  }
-
-  .movieList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 780px) {
-  .container {
-    max-width: 780px;
-    padding: 0, 20px;
-  }
-
-  .movieList {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
   }
 }

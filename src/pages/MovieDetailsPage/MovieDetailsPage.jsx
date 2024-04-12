@@ -42,10 +42,10 @@ const MovieDetailsPage = () => {
             Go Back
           </Link>
           <div className={css.movieWrapper}>
-            <img
+            <img className={css.movieImg}
               src={`https://image.tmdb.org/t/p/w500/${detailsMovie.backdrop_path}`}
               alt={detailsMovie.title}
-            />
+              />
             <div className={css.movieText}>
               <h2>{`${
                 detailsMovie.original_title
