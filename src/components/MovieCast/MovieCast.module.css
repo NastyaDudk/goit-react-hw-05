@@ -1,3 +1,7 @@
+.infoImageWrapper {
+  text-align: center;
+}
+
 .castListWrapper {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
@@ -19,7 +23,7 @@
   }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 600px) {
   .castListWrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

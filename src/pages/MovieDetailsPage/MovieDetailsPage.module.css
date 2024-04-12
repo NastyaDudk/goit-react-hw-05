@@ -37,6 +37,7 @@
 
 .movieText {
   text-align: start;
+  margin-top: 60px;
 }
 
 .movieUl {
@@ -53,7 +54,7 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   .movieImg {
     width: 250px;
     height: 200px;
