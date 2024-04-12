@@ -8,7 +8,17 @@
   gap: 60px;
 }
 
+.infoList {
+  text-align: center;
+}
+
 @media only screen and (max-width: 499px) {
+  .container {
+    max-width: 499px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .castListWrapper {
     display: flex;
     flex-direction: column;
@@ -16,6 +26,12 @@
 }
 
 @media only screen and (min-width: 500px) {
+  .container {
+    max-width: 500px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .castListWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -24,6 +40,24 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .container {
+    max-width: 600px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .castListWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    max-width: 600px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .castListWrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

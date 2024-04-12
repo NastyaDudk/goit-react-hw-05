@@ -42,10 +42,14 @@ const MovieDetailsPage = () => {
             Go Back
           </Link>
           <div className={css.movieWrapper}>
-            <img className={css.movieImg}
+            <ul>
+              <li className={css.imageFilm}>
+                <img className={css.movieImg}
               src={`https://image.tmdb.org/t/p/w500/${detailsMovie.backdrop_path}`}
               alt={detailsMovie.title}
               />
+                </li>
+              </ul>
             <div className={css.movieText}>
               <h2>{`${
                 detailsMovie.original_title
@@ -54,7 +58,7 @@ const MovieDetailsPage = () => {
               <h3>Overview</h3>
               <p>{detailsMovie.overview}</p>
               <h4>Genres</h4>
-              <ul>
+              <ul className={css.afterGenres}>
                 {detailsMovie.genres.map(({ id, name }) => {
                   return <li key={id}>{name}</li>;
                 })}
