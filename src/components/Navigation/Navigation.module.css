@@ -48,15 +48,3 @@
   color: white;
   border-radius: 4px;
 }
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-}

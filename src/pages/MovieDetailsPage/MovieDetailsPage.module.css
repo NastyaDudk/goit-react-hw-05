@@ -1,10 +1,9 @@
 .mainWrapper {
   display: flex;
-  width: 70%;
+
   flex-direction: column;
   gap: 45px;
-  padding: 100px 0;
-  margin: 0 auto;
+  margin: 15px;
 }
 
 .movieImg {
