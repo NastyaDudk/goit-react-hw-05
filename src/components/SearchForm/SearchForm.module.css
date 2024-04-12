@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  overflow-x: hidden;
 }
 
 .searchInput {
@@ -49,7 +48,7 @@
     padding-right: 15px;
   }
   .searchInput {
-    width: 140px;
+    max-width: 140px;
   }
 
   .searchButton {

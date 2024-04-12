@@ -29,6 +29,7 @@ const SearchForm = ({ onSubmit }) => {
 
 
   return (
+    <div className={css.errContainer}>
     <form className={css.searchForm} onSubmit={handleSubmit}>
       <input
         className={css.searchInput}
@@ -40,7 +41,8 @@ const SearchForm = ({ onSubmit }) => {
         Search
       </button>
       <ToastContainer/>
-    </form>
+      </form>
+      </div>
   );
 };
 
