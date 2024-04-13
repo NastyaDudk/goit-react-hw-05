@@ -65,6 +65,10 @@
     height: 300px;
   }
 
+  .imageFilm {
+    text-align: center;
+  }
+
   .goBackLink {
     padding: 5px 15px;
   }
