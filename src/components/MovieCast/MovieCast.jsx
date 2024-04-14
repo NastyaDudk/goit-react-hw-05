@@ -7,9 +7,9 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 
 const MovieCast = () => {
   const [loading, setLoading] = useState(false);
-  const [cast, setCast] = useState(null);
+  const [cast, setCast] = useState([]);
   const [error, setError] = useState(null);
-  const { id } = useParams();
+  const { movieId } = useParams();
   const castRef = useRef();
 
  useEffect(() => {
@@ -17,7 +17,7 @@ const MovieCast = () => {
     try {
       setError(false);
       setLoading(true);
-      const cast = await fetchMovieCast(id);
+      const cast = await fetchMovieCast(movieId);
       setCast(cast);
     } catch (error) {
       setError(error.message);
@@ -36,7 +36,7 @@ const MovieCast = () => {
     });
   }
     }, 500);
-    }, [id]);
+    }, [movieId]);
 
   return (
     <>

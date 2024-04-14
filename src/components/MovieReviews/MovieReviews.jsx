@@ -8,7 +8,7 @@ const MovieReviews = () => {
   const [loading, setLoading] = useState(false);
   const [reviews, setReviews] = useState(null);
   const [error, setError] = useState(null);
-  const { id } = useParams();
+  const { movieId } = useParams();
   const reviewsRef = useRef();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const MovieReviews = () => {
     try {
       setError(null);
       setLoading(true);
-      const reviews = await fetchMovieReviews(id);
+      const reviews = await fetchMovieReviews(movieId);
       setReviews(reviews);
     } catch (error) {
       setError(error.message);
@@ -38,7 +38,7 @@ const MovieReviews = () => {
   return () => {
     clearTimeout(tID);
   };
-}, [id]);
+}, [movieId]);
 
   return (
     <>

@@ -12,7 +12,7 @@ const MovieDetailsPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const {id} = useParams();
+  const {movieId} = useParams();
 
   const location = useLocation();
   const backLinkRef = useRef(location.state ?? "/");
@@ -22,7 +22,7 @@ const MovieDetailsPage = () => {
       try {
         setError(false);
         setLoading(true);
-        const response = await fetchMovieById (id);
+        const response = await fetchMovieById (movieId);
         setDetailsMovie(() => response);
       } catch (error) {
         console.log("error: ", error);
@@ -32,7 +32,7 @@ const MovieDetailsPage = () => {
       }
     }
     fetchDetailsMovie();
-  }, [id]);
+  }, [movieId]);
 
   return (
     <div className={css.mainWrapper}>

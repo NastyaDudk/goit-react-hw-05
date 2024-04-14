@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, } from "react-router-dom";
 import MoviesPage from "./pages/MoviesPage/MoviesPage.jsx"
 import Navigation from "./components/Navigation/Navigation.jsx";
 import MovieCast from "./components/MovieCast/MovieCast.jsx"
@@ -16,11 +16,11 @@ const MovieReviews = lazy(() =>
 );
 import Loader from "./components/Loader/Loader.jsx";
 
-import css from "./App.module.css";
+import css from "./App.module.css";  
 
 const App = () => {
   return (
-    <Router>
+ 
     <>
       <Navigation />
       <div className={css.container}>
@@ -28,16 +28,16 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/movies" element={<MoviesPage />} />
-            <Route path="/movies/:id/*" element={<MovieDetailsPage />}>
-              <Route path="cast" element={<MovieCast />} />
-              <Route path="reviews" element={<MovieReviews />} />
+             <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
+            <Route path="/movies/:movieId/cast" element={<MovieCast />} />
+            <Route path="/movies/:movieId/reviews" element={<MovieReviews />} />
             </Route>
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </div>
       </>
-      </Router>
+     
   );
 };
 
